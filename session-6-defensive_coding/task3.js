@@ -7,11 +7,12 @@ const getUserData = (userId, userData) => {
     if (!userInfo) throw new Error("User not found");
 
     const info = {
-      name: userInfo.name ? userInfo.name : null,
-      age: userInfo.age ? userInfo.age : null,
-      email: userInfo.email ? userInfo.email : null,
+      name: userInfo.name || null,
+      age: userInfo.age || null,
+      email: userInfo.email || null,
     };
 
+    console.log(info);
     return info;
   } catch (err) {
     console.log(err);

@@ -26,6 +26,8 @@ const processCalculation = (tax, prices) => {
       total_amount = item + item * checkTax;
     });
 
+    console.log(total_amount);
+
     return total_amount;
   } catch (err) {
     console.log(err);
